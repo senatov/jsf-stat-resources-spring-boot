@@ -1,0 +1,43 @@
+= spring-boot 2.3+JSF 2.3
+
+- Java 14, JSF2,
+- Spring App (Tomcat 9),
+- Spring Boot,
+
+== Example of using static resources
+by spring boot web App
+
+[green]#*copyleft* _`Iakov Senatov 05.2020.`_#
+
+|===
+|Libs | Ver
+
+|Spring Boot
+|[red]*2.3.0*
+
+
+|JSF
+|Mojarra 2.4.0
+
+
+|JSE
+|[red]*14*
+
+|===
+
+My own implementation of Projects from Spring.io webflow examples.
+
+*Paths:*
+
+|===
+|*path are:* | *description* |*remarks*
+
+|http://localhost:18085/ui
+| xxx
+| xxxx
+
+|===
+
+mailto://javaentwickler@gmail.com[EMail]
+
+
