@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
 >
 
 
 <h:head>
-    <meta charset="utf-8"/>
     <link rel="shortcut icon" href="favicon.png"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="theme-color"  style="background-color: bisque"/>
     <meta name="description" content="Web-Testapp for Spring Boot 2.3.0, JSF and PrimeFaces. I. Senatov"/>
     <link rel="apple-touch-icon" href="favicon.png"/>
     <title>Web-Testapp for Spring Boot 2.3.0, JSF and PrimeFaces</title>
@@ -17,9 +18,11 @@
 
 <h:body>
     <h:form>
-        <h:outputText id="greeting" value="Hello from #{userBean.from} it's #{userBean.date}" />
+        <h:outputText id="greeting" value="Hi, current time from  #{userBean.from} is:  #{userBean.date}" style="color: blueviolet"/>
         <br/>
-        <h:commandButton value="Update Date"><f:ajax render="greeting"></f:ajax></h:commandButton>
+        <h:commandButton value="Update Date" style="background-color: coral">
+            <f:ajax render="greeting"/>
+        </h:commandButton>
     </h:form>
 </h:body>
 </html>
