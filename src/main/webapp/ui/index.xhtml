@@ -18,11 +18,12 @@
 
 <h:body>
     <h:form>
-        <h:outputText id="greeting" value="Hi, current time from  #{userBean.from} is:  #{userBean.date}" style="color: blueviolet"/>
-        <br/>
-        <h:commandButton value="Update Date" style="background-color: coral">
+        <p:separator style="color: cadetblue" />
+        <p:outputLabel id="greeting" value="Hi, current time from  #{userBean.from} is:  #{userBean.date}" style="color: blueviolet"/>
+        <p:separator />
+        <p:commandButton value="Update Date" style="background-color: antiquewhite;margin-right:10px;" icon="pi pi-save">
             <f:ajax render="greeting"/>
-        </h:commandButton>
+        </p:commandButton>
     </h:form>
 </h:body>
 </html>
