@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="JsfSpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <module name="jsf-stat-resources-spring-boot" />
-    <option name="SPRING_BOOT_MAIN_CLASS" value="de.senatov.drillstatic.JsfSpringBootApplication" />
-    <option name="ALTERNATIVE_JRE_PATH" />
-    <method v="2">
-      <option name="Make" enabled="true" />
-      <option name="LaunchBrowser.Before.Run" url="http://localhost:18085/ui/index.xhtml" />
-    </method>
-  </configuration>
+    <configuration default="false" name="JsfSpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+        <module name="jsf-stat-resources-spring-boot"/>
+        <option name="SPRING_BOOT_MAIN_CLASS" value="de.senatov.drillstatic.JsfSpringBootApplication"/>
+        <option name="ALTERNATIVE_JRE_PATH"/>
+        <method v="2">
+            <option name="Make" enabled="true"/>
+            <option name="LaunchBrowser.Before.Run" url="http://localhost:18085/ui/index.xhtml"/>
+        </method>
+    </configuration>
 </component>

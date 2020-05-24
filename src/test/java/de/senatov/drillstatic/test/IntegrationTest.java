@@ -16,20 +16,15 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class IntegrationTest {
 
-	@Autowired
-	private WebTestClient webClient;
+    @Autowired
+    private WebTestClient webClient;
 
 
 
-	@Test
-	public void test() {
+    @Test
+    public void test() {
 
-		this.webClient
-				.get()
-				.uri("/ui/index.xhtml")
-				.exchange()
-				.expectStatus()
-				.isOk();
-	}
+        this.webClient.get().uri("/ui/index.xhtml").exchange().expectStatus().isOk();
+    }
 
 }

@@ -5,6 +5,7 @@
 - Spring Boot,
 
 == Example of using static resources
+
 by spring boot web App
 
 [green]#*copyleft* _`Iakov Senatov 05.2020.`_#
@@ -12,16 +13,19 @@ by spring boot web App
 |===
 |Libs | Ver
 
-|Spring Boot
+|[blue]*Spring Boot*
 |[red]*2.3.0*
 
 
-|JSF
-|Mojarra 2.4.0
+|[blue]*JSF*
+|[green]*Mojarra 2.4.0*
 
 
-|JSE
+|[blue]*JDK*
 |[red]*14*
+
+|[blue]*PrimeFaces*
+|[red]*7.0*
 
 |===
 
@@ -33,8 +37,8 @@ My own implementation of Projects from Spring.io webflow examples.
 |*path are:* | *description* |*remarks*
 
 |http://localhost:18085/ui
-| xxx
-| xxxx
+| [gray]*xxx*
+| [gray]*xxxx*
 
 |===
 
