@@ -1,4 +1,6 @@
-= spring-boot 2.3+JSF 2.3
+= Pet Project to test *.js from Primefaces (JSF-Mojarra 2.4, PrimeFaces 7.0, Spring Boot 2.3, Lombok etc )
+
+
 
 - Java 14, JSF2,
 - Spring App (Tomcat 9),
@@ -30,7 +32,6 @@ by spring boot web App
 
 |===
 
-My own implementation of Projects from Spring.io webflow examples.
 
 *Paths:*
 
