@@ -3,6 +3,7 @@
 - Java 14, JSF2,
 - Spring App (Tomcat 9),
 - Spring Boot,
+- PrimerFaces
 
 == Example of using static resources
 

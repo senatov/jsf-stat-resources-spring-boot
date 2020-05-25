@@ -7,20 +7,31 @@
 
 
 <h:head>
-    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="shortcut icon" href="/images/icons/favicon.png"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="description" content="Web-Testapp for Spring Boot 2.3.0, JSF and PrimeFaces. I. Senatov"/>
-    <link rel="apple-touch-icon" href="favicon.png"/>
+    <link rel="apple-touch-icon" href="/images/icons/favicon.png"/>
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
     <title>Web-Testapp for Spring Boot 2.3.0, JSF and PrimeFaces</title>
 </h:head>
 
 <h:body>
+
+    <p:panelGrid columns="2" style="border: #491795">
+        <h:outputText value="contextPath:"/>
+        <h:outputText value="${request.contextPath}"/>
+        <h:outputText value="RealPath:"/>
+        <h:outputText value="${request.getRealPath('/')}"/>
+    </p:panelGrid>
+
+    <p:separator styleClass="append-6"/>
+
     <h:form>
         <p:separator style="color: cadetblue"/>
-        <p:outputLabel id="greeting" value="Hi, current time from  #{userBean.from} is:  #{userBean.date}" style="color: blueviolet"/>
+        <p:outputLabel id="gen_new_local_time" value="Hi, current time from  #{userBean.from} is:  #{userBean.date}" style="color: blueviolet"/>
         <p:separator/>
-        <p:commandButton value="Update Date" style="background-color: antiquewhite;margin-right:10px;" icon="pi pi-save">
-            <f:ajax render="greeting"/>
+        <p:commandButton id="updatebutton"  value="Update DateTime" title="Click to update DateTime" style="background-color: antiquewhite;margin-right:10px;" icon="pi pi-spinner">
+            <f:ajax render="gen_new_local_time"/>
         </p:commandButton>
     </h:form>
 </h:body>

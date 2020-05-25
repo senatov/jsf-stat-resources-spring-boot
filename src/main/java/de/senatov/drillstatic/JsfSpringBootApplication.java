@@ -64,7 +64,7 @@ public class JsfSpringBootApplication implements ServletContextAware {
         sc.setInitParameter("javax.faces.STATE_SAVING_METHOD", "server");
         sc.setInitParameter("primefaces.CLIENT_SIDE_VALIDATION", TRUE.toString());
         sc.setInitParameter("primefaces.FONT_AWESOME", TRUE.toString());
-        sc.setInitParameter("primefaces.THEME", "redmond");
+        sc.setInitParameter("primefaces.THEME", "bootstrap");
         sc.setInitParameter("com.sun.faces.compressJavaScript", FALSE.toString());
         sc.setInitParameter("Javax.faces.CONFIG_FILES", "/WEB-INF/faces-config.xml");
     }
