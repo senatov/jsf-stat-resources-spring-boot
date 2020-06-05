@@ -1,4 +1,8 @@
-= Pet Project to test *.js from Primefaces (JSF-Mojarra 2.4, PrimeFaces 7.0, Spring Boot 2.3, Lombok etc )
+image::src/main/resources/file.png[]
+
+#Pet Project to test *.js from Primefaces#
+
+(JSF-Mojarra 2.4, PrimeFaces 7.0, Spring Boot 2.3, Lombok etc )
 
 
 
