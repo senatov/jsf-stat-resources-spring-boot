@@ -2,7 +2,7 @@ image::src/main/resources/file.png[]
 
 #Pet Project to test *.js from Primefaces#
 
-(JSF-Mojarra 2.4, PrimeFaces 7.0, Spring Boot 2.3, Lombok etc )
+(JSF-Mojarra 2.4, PrimeFaces 7.0, Spring Boot 2.3.1, Lombok etc )
 
 
 
@@ -21,7 +21,7 @@ by spring boot web App
 |Libs | Ver
 
 |[blue]*Spring Boot*
-|[red]*2.3.0*
+|[red]*2.3.1*
 
 
 |[blue]*JSF*
