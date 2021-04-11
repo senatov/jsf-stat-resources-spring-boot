@@ -1,27 +1,28 @@
+= Pet Project to test *.js from Primefaces
+
+[green]#copyleft:  _Iakov Senatov 05.2020._#
+
+JSF-Mojarra 2.4, PrimeFaces 7.0, Spring Boot 2.3.2.RELEASE, Lombok etc
+
+
 image::src/main/resources/file.png[]
-
-#Pet Project to test *.js from Primefaces#
-
-(JSF-Mojarra 2.4, PrimeFaces 7.0, Spring Boot 2.3.1, Lombok etc )
-
 
 
 - Java 15, JSF2,
 - Spring App (Tomcat 9),
-- Spring Boot,
+- Spring Boot 2.3.2.RELEASE,
 - PrimerFaces
 
 == Example of using static resources
 
 by spring boot web App
 
-[green]#*copyleft* _`Iakov Senatov 05.2020.`_#
 
 |===
 |Libs | Ver
 
 |[blue]*Spring Boot*
-|[red]*2.3.2*
+|[red]*2.3.2.RELEASE*
 
 
 |[blue]*JSF*
@@ -29,7 +30,7 @@ by spring boot web App
 
 
 |[blue]*JDK*
-|[red]*15*
+|[red]*Zulu OpenJDK15*
 
 |[blue]*PrimeFaces*
 |[red]*7.0*
