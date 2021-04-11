@@ -29,13 +29,12 @@ by spring boot web App
 
 
 |[blue]*JDK*
-|[red]*14*
+|[red]*15*
 
 |[blue]*PrimeFaces*
 |[red]*7.0*
 
 |===
-
 
 *Paths:*
 
@@ -49,5 +48,3 @@ by spring boot web App
 |===
 
 mailto://javaentwickler@gmail.com[EMail]
-
-

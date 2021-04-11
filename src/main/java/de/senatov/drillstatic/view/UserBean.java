@@ -17,25 +17,23 @@ import java.time.LocalDateTime;
 @ToString
 public class UserBean {
 
-	public UserBean() {
+    public UserBean() {
 
-		log.debug("Created UserBean");
-	}
-
-
-
-	public String getFrom() {
-
-		return this.toString();
-	}
+        log.debug("Created UserBean");
+    }
 
 
 
-	public String getDate() {
+    public String getFrom() {
 
-		return LocalDateTime
-				.now()
-				.toString();
-	}
+        return toString();
+    }
+
+
+
+    public String getDate() {
+
+        return LocalDateTime.now().toString();
+    }
 
 }
