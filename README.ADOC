@@ -6,7 +6,7 @@ image::src/main/resources/file.png[]
 
 
 
-- Java 14, JSF2,
+- Java 15, JSF2,
 - Spring App (Tomcat 9),
 - Spring Boot,
 - PrimerFaces
@@ -21,7 +21,7 @@ by spring boot web App
 |Libs | Ver
 
 |[blue]*Spring Boot*
-|[red]*2.3.1*
+|[red]*2.3.2*
 
 
 |[blue]*JSF*
