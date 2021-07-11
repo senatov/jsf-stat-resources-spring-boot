@@ -3,13 +3,13 @@ To demonstrate minimal start up Spring Boot + JSF + Primefaces. No more.
 
 [green]#copyleft:  _Iakov Senatov 05.2021._#
 
-JSF-Mojarra 2.4, PrimeFaces 8.0, Spring Boot 2.4.RELEASE, Lombok etc
+JSF-Mojarra 2.4, PrimeFaces 10.1, Spring Boot 2.4.RELEASE, Lombok etc
 
 
 image::src/main/resources/file.png[]
 
 
-- Java 15, JSF2 Mojarra 2.4 (Glasfish),
+- AdoptOpenJDK Hotspot 16, JSF2 Mojarra 2.4 (Glasfish),
 - Spring App (Tomcat 9),
 - Spring Boot 2.4.4.RELEASE,
 - PrimerFaces
@@ -31,10 +31,10 @@ by spring boot web App
 
 
 |[blue]*JDK*
-|[red]*Zulu OpenJDK 15*
+|[red]*AdoptOpenJDK 16*
 
 |[blue]*PrimeFaces*
-|[red]*8.0*
+|[red]*10.1*
 
 |===
 

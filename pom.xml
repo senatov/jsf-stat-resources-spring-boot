@@ -1,12 +1,13 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.senatov.drillstatic</groupId>
     <artifactId>jsf-stat-resources-spring-boot</artifactId>
     <packaging>war</packaging>
-    <version>1.0.11</version>
-    <name>Example: Impl. drill static resources: Spring-Boot 2.4,JSF2 Mojarra, PrimeFaces 8.0</name>
+    <version>1.0.12</version>
+    <name>Example: Impl. drill static resources: Spring-Boot 2.4, JSF2 Mojarra, PrimeFaces 10.0</name>
     <url>http://maven.apache.org</url>
 
     <!-- lookup parent from repository -->
@@ -33,7 +34,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>15</java.version>
+        <java.compiler.release>16</java.compiler.release>
     </properties>
 
     <pluginRepositories>
@@ -85,18 +86,13 @@
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
         </repository>
-        <repository>
-            <id>prime-repo</id>
-            <name>PrimeFaces Maven Repository</name>
-            <url>https://repository.primefaces.org</url>
-        </repository>
     </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.faces</artifactId>
-            <version>2.4.0</version>
+            <version>[2.4, 2.5)</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -123,7 +119,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
+            <version>[1.7, 1.9)</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -145,32 +141,28 @@
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>txw2</artifactId>
-            <version>2.4.0-b180830.0438</version>
+            <version>(2.4, 3)</version>
         </dependency>
         <dependency>
-            <groupId>javax.enterprise</groupId>
+            <groupId>com.guicedee.services</groupId>
             <artifactId>cdi-api</artifactId>
-            <version>2.0.SP1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.primefaces.extensions</groupId>
-            <artifactId>primefaces-extensions</artifactId>
-            <version>8.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>all-themes</artifactId>
-            <version>1.0.10</version>
+            <version>1.1.1.9-jre16</version>
         </dependency>
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>8.0</version>
+            <version>10.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.primefaces.extensions</groupId>
+            <artifactId>primefaces-extensions-parent</artifactId>
+            <version>10.0.2</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
+            <version>[1.18, 1.32)</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -184,7 +176,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>28.0-jre</version>
+            <version>[28.0-jre, 32.0)</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -199,79 +191,81 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13</version>
+            <version>[4.13, 5)</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.2</version>
-                <executions>
-                    <execution>
-                        <id>analyze</id>
-                        <goals>
-                            <goal>analyze-only</goal>
-                        </goals>
-                        <configuration>
-                            <failOnWarning>false</failOnWarning>
-                            <ignoreNonCompile>true</ignoreNonCompile>
-                            <outputXML>true</outputXML>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>pl.project13.maven</groupId>
-                <artifactId>git-commit-id-plugin</artifactId>
-                <version>4.0.0</version>
-                <executions>
-                    <execution>
-                        <id>get-the-git-infos</id>
-                        <goals>
-                            <goal>revision</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <dateFormat>yyyyMMdd-HHmmss</dateFormat>
-                    <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-                    <generateGitPropertiesFile>false
-                    </generateGitPropertiesFile>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <classpathPrefix>lib/</classpathPrefix>
-                        </manifest>
-                        <manifestEntries>
-                            <Built-At>${maven.build.timestamp}</Built-At>
-                            <Implementation-Build>${project.build}</Implementation-Build>
-                            <version>${project.version}</version>
-                            <mode>development</mode>
-                            <url>${project.url}</url>
-                            <Build-Jdk>${java.version} (${java.vendor} ${java.vm.version}</Build-Jdk>
-                            <Build-Timestamp>${maven.build.timestamp}</Build-Timestamp>
-                            <Build-Revision>${git.commit.id}</Build-Revision>
-                            <Build-OS>${os.name} ${os.arch} ${os.version}</Build-OS>
-                        </manifestEntries>
-                    </archive>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.1.2</version>
+                    <executions>
+                        <execution>
+                            <id>analyze</id>
+                            <goals>
+                                <goal>analyze-only</goal>
+                            </goals>
+                            <configuration>
+                                <failOnWarning>false</failOnWarning>
+                                <ignoreNonCompile>true</ignoreNonCompile>
+                                <outputXML>true</outputXML>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>pl.project13.maven</groupId>
+                    <artifactId>git-commit-id-plugin</artifactId>
+                    <version>4.0.0</version>
+                    <executions>
+                        <execution>
+                            <id>get-the-git-infos</id>
+                            <goals>
+                                <goal>revision</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <dateFormat>yyyyMMdd-HHmmss</dateFormat>
+                        <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+                        <generateGitPropertiesFile>false
+                        </generateGitPropertiesFile>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.3.1</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                                <classpathPrefix>lib/</classpathPrefix>
+                            </manifest>
+                            <manifestEntries>
+                                <Built-At>${maven.build.timestamp}</Built-At>
+                                <Implementation-Build>${project.build}</Implementation-Build>
+                                <version>${project.version}</version>
+                                <mode>development</mode>
+                                <url>${project.url}</url>
+                                <Build-Jdk>${java.version} (${java.vendor} ${java.vm.version}</Build-Jdk>
+                                <Build-Timestamp>${maven.build.timestamp}</Build-Timestamp>
+                                <Build-Revision>${git.commit.id}</Build-Revision>
+                                <Build-OS>${os.name} ${os.arch} ${os.version}</Build-OS>
+                            </manifestEntries>
+                        </archive>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 </project>
