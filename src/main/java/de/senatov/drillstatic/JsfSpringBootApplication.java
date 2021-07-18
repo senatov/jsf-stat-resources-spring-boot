@@ -1,7 +1,6 @@
 package de.senatov.drillstatic;
 
 
-
 import com.google.common.collect.ImmutableMap;
 import com.sun.faces.config.ConfigureListener;
 import de.senatov.drillstatic.view.ViewScope;
@@ -19,7 +18,6 @@ import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
 
-
 @SpringBootApplication
 public class JsfSpringBootApplication implements ServletContextAware {
 
@@ -27,7 +25,6 @@ public class JsfSpringBootApplication implements ServletContextAware {
 
         SpringApplication.run(JsfSpringBootApplication.class, args);
     }
-
 
 
     @Bean
@@ -39,7 +36,6 @@ public class JsfSpringBootApplication implements ServletContextAware {
     }
 
 
-
     @Bean
     public ServletRegistrationBean<FacesServlet> servletRegistrationBean() {
 
@@ -47,7 +43,6 @@ public class JsfSpringBootApplication implements ServletContextAware {
         bean.setLoadOnStartup(1);
         return bean;
     }
-
 
 
     @Override
@@ -66,7 +61,7 @@ public class JsfSpringBootApplication implements ServletContextAware {
         sc.setInitParameter("javax.faces.STATE_SAVING_METHOD", "server");
         sc.setInitParameter("primefaces.CLIENT_SIDE_VALIDATION", TRUE.toString());
         sc.setInitParameter("primefaces.FONT_AWESOME", TRUE.toString());
-        sc.setInitParameter("primefaces.THEME", "bootstrap");
+        sc.setInitParameter("primefaces.THEME", "vela");
     }
 
 }

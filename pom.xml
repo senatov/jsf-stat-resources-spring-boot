@@ -7,14 +7,13 @@
     <artifactId>jsf-stat-resources-spring-boot</artifactId>
     <packaging>war</packaging>
     <version>1.0.12</version>
-    <name>Example: Impl. drill static resources: Spring-Boot 2.4, JSF2 Mojarra, PrimeFaces 10.0</name>
-    <url>http://maven.apache.org</url>
+    <name>Example: Impl. drill static resources: Spring-Boot 2.5.2, JSF2 Mojarra, PrimeFaces 10.0</name>
 
     <!-- lookup parent from repository -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.4</version>
+        <version>2.5.2</version>
         <relativePath/>
     </parent>
 
@@ -92,7 +91,7 @@
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.faces</artifactId>
-            <version>[2.4, 2.7)</version>
+            <version>[2.4, 2.8)</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -119,7 +118,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>[1.7, 1.9)</version>
+            <version>[1.7, 2.1)</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -162,7 +161,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>[1.18, 1.32)</version>
+            <version>[1.18, 1.35)</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -176,7 +175,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>[28.0-jre, 32.0)</version>
+            <version>[28.0-jre, 36.0)</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

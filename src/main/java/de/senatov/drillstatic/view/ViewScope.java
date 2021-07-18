@@ -1,13 +1,11 @@
 package de.senatov.drillstatic.view;
 
 
-
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.config.Scope;
 
 import javax.faces.context.FacesContext;
 import java.util.Map;
-
 
 
 /**
@@ -29,13 +27,11 @@ public class ViewScope implements Scope {
     }
 
 
-
     @Override
     public String getConversationId() {
 
         return null;
     }
-
 
 
     @Override
@@ -44,13 +40,11 @@ public class ViewScope implements Scope {
     }
 
 
-
     @Override
     public Object remove(String name) {
 
         return FacesContext.getCurrentInstance().getViewRoot().getViewMap().remove(name);
     }
-
 
 
     @Override

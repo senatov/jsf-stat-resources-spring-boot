@@ -1,14 +1,12 @@
 package de.senatov.drillstatic.view;
 
 
-
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.faces.view.ViewScoped;
 import java.time.LocalDateTime;
-
 
 
 @Component
@@ -23,12 +21,10 @@ public class UserBean {
     }
 
 
-
     public String getFrom() {
 
         return toString();
     }
-
 
 
     public String getDate() {
