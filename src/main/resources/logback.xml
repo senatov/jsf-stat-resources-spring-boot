@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Senatov.07.2021  -->
+<configuration>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date %level %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!--
+           COMMON
+     -->
+    <root level="DEBUG">
+        <appender-ref ref="console"/>
+    </root>
+    <!--
+            LOGGERS
+     -->
+    <logger name="de.senatov.drillstatic" level="DEBUG">
+        <appender-ref ref="console"/>
+    </logger>
+</configuration>

@@ -16,19 +16,18 @@ import java.time.LocalDateTime;
 public class UserBean {
 
     public UserBean() {
-
         log.debug("Created UserBean");
     }
 
 
     public String getFrom() {
-
+        log.info("getFrom ()");
         return toString();
     }
 
 
     public String getDate() {
-
+        log.warn("getDate ()");
         return LocalDateTime.now().toString();
     }
 

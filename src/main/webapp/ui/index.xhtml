@@ -16,7 +16,7 @@
 </h:head>
 
 <h:body>
-    <p:panelGrid columns="2" style="border: #9284a8">
+    <p:panelGrid columns="2" style="border: #dfdae7">
         <h:outputText value="contextPath:"/>
         <h:outputText value="${request.contextPath}"/>
         <h:outputText value="RealPath:"/>
@@ -26,8 +26,7 @@
     <p:separator styleClass="append-6"/>
 
     <h:form>
-        <p:separator style="color: #4d0b47"/>
-        <p:outputLabel id="gen_new_local_time" value="Hi, current time from  #{userBean.from} is:  #{userBean.date}" style="color: #165650"/>
+        <p:outputLabel id="gen_new_local_time" value="Hi, current time from  #{userBean.from} is:  #{userBean.date}" style="color: #2fcec0"/>
         <p:separator/>
         <p:commandButton id="updatebutton"
                          value="Update DateTime"
